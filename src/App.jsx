@@ -1,10 +1,18 @@
 import React from "react";
+import Signin from "./Components/Sign";
+import Home from "./Components/Home";
+import { createBrowserRouter, RouterProvider } from "react-router";
+
+const Router = createBrowserRouter([
+  { path: "", Component: Signin },
+  { path: "Home", Component: Home },
+]);
 
 const App = () => {
   return (
-    <div>
-      <h1 class="text-3xl font-bold bg-red-400 underline">Hello world!</h1>
-    </div>
+    <>
+      <RouterProvider router={Router} />
+    </>
   );
 };
 
